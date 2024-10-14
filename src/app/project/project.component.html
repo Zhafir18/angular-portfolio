@@ -1,0 +1,21 @@
+<div class="project">
+  @for (project of projects; track $index) {
+  <div class="card">
+    <div
+      class="card-image"
+      [style.background-image]="'url(' + project.image + ')'"
+    ></div>
+    <div class="card-title">
+      <a href="">{{ project.title }}</a>
+    </div>
+    <div class="card-description">
+      <p>{{ project.description.desc1 }}</p>
+      @if (project.description.desc2) {
+      <p>{{ project.description.desc2 }}</p>
+      } @if (project.description.desc3) {
+      <p>{{ project.description.desc3 }}</p>
+      }
+    </div>
+  </div>
+  }
+</div>

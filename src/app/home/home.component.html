@@ -1,0 +1,68 @@
+<div class="home">
+  <div class="hero-section">
+    <div class="hero-word" data-aos="fade-right" data-aos-duration="3000">
+      <h1>Software Developer</h1>
+      <span>Specialized in Website & Web Apps</span>
+      <div class="about-me-section">
+        <a [routerLink]="['about']" class="about-me">About Me</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left" data-aos-duration="3000">
+      <div class="angular">
+        <img
+          id="angular-image"
+          src="/assets/Angular_full_color_logo.svg.png"
+          alt="Angular"
+        />
+        <p>Angular</p>
+      </div>
+      <div class="java">
+        <img id="java-image" src="/assets/java.png" alt="Java" />
+        <p>Java</p>
+      </div>
+      <div class="dotnet">
+        <img id="dotnet-image" src="/assets/DotNet.png" alt=".Net" />
+        <p>.Net</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h1>My Projects</h1>
+    <div class="projects-carousel" data-aos="fade-up" data-aos-duration="2000">
+      @if (projects.length > 3) {
+      <div class="carousel-button left" (click)="scrollLeft()">&#10094;</div>
+      }
+
+      <div class="carousel-container" #carousel>
+        @for (project of projects; track $index) {
+        <div class="carousel-card">
+          <div class="carousel-card-title">{{ project.description }}</div>
+          <div class="carousel-card-body">
+            <div class="carousel-card-image">
+              <img
+                [src]="project.image"
+                alt="{{ project.title }}"
+                [id]="project.id"
+              />
+            </div>
+            <div>
+              <button>See Project</button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
+      @if (projects.length > 3) {
+      <div class="carousel-button right" (click)="scrollRight()">&#10095;</div>
+      }
+    </div>
+  </div>
+
+  <div class="getintouch">
+    <img src="/assets/icons.svg" alt="" data-aos="fade-down" data-aos-duration="3000"/>
+    <h1>Get In Touch With Me</h1>
+    <button [routerLink]="['contact']">Get In Touch</button>
+  </div>
+</div>

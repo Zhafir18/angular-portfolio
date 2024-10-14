@@ -1,0 +1,23 @@
+<nav class="{{ darkTheme ? 'nav-dark' : '' }}">
+  <div class="nav-title">
+    <a [routerLink]="['']">
+      <h5>
+        <span> <img src="assets/Zhafir-Logo.png" alt="" /> </span>Zhafir
+        Ghiffari
+      </h5>
+      <span>Software Developer</span>
+    </a>
+  </div>
+  <div class="nav-menu">
+    <a [routerLink]="['about']" [routerLinkActive]="['selected']">About</a>
+    <a [routerLink]="['project']" [routerLinkActive]="['selected']">Projects</a>
+    <a [routerLink]="['contact']" [routerLinkActive]="['selected']">Contact</a>
+  </div>
+  <div class="nav-theme">
+    <a (click)="toggleTheme()">
+      <i
+        [class]="darkTheme ? 'bi bi-brightness-high-fill' : 'bi bi-moon-fill'"
+      ></i>
+    </a>
+  </div>
+</nav>

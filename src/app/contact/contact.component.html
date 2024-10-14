@@ -1,0 +1,45 @@
+<div class="contact">
+  <div class="contact-title">
+    <h1>Contact Me</h1>
+    <span><img src="/assets/contact-icon.png" alt="" /></span>
+  </div>
+  <div class="contact-me">
+    <div class="contact-card">
+      <form (ngSubmit)="sendEmail()">
+        <div class="contact-input">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div class="contact-input">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div class="contact-input">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="social-media">
+      <div class="soc">
+        <div class="social-icon">
+          <i class="bi bi-instagram"></i>
+        </div>
+        Instagram
+      </div>
+      <div class="soc">
+        <div class="social-icon">
+          <i class="bi bi-linkedin"></i>
+        </div>
+        LinkedIn
+      </div>
+      <div class="soc">
+        <div class="social-icon">
+          <i class="bi bi-whatsapp"></i>
+        </div>
+        Whatsapp
+      </div>
+    </div>
+  </div>
+</div>

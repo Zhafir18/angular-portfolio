@@ -1,0 +1,223 @@
+.about {
+  padding: 20px;
+  /* min-width: 1400px; */
+}
+
+.about-title {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction {
+  /* display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: baseline;
+  margin-bottom: 30px; */
+  text-align: center;
+}
+
+.description {
+  max-width: 1400px;
+}
+
+.profile img {
+  height: 70px;
+  margin-left: 5px;
+  margin-bottom: 40px;
+  /* border-radius: 50%; */
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 500px;
+  width: 1400px;
+}
+
+.certificate {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.certificate h3 {
+  text-align: center;
+}
+
+.certificate-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card {
+  min-width: 100%;
+  text-align: center;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+.skill {
+  /* margin-bottom: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-width: 1400px;
+}
+
+.skill h3 {
+  text-align: center;
+}
+
+.skill-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skill img {
+  height: 50px;
+  width: 50px;
+}
+
+.one-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.one-skill:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark-theme {
+  background-color: rgb(10, 10, 10);
+  color: inherit;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  background-color: #141414;
+  color: inherit;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content--opened {
+  display: block;
+  transition: display 0.3s ease-in;
+}
+
+.skill label {
+  font-size: 18px;
+  display: block;
+}
+.skill:nth-child(2) .progress-bar {
+  background-color: #e74c3c;
+}
+
+.skill:nth-child(3) .progress-bar {
+  background-color: #8e44ad;
+}
+
+.skill:nth-child(4) .progress-bar {
+  background-color: #f39c12;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  /* .about {
+    width: 70%;
+  } */
+
+  .introduction h4{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .skill {
+    min-width: 50%;
+  }
+}

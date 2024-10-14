@@ -1,0 +1,148 @@
+:host {
+  height: 100vh;
+}
+
+/* .contact {
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+} */
+
+.contact-title {
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-title img {
+  height: 70px;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.contact-card {
+  padding: 30px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-input label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-input input:focus,
+.contact-input textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.social-media {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dark-theme {
+  background-color: #161616;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .soc {
+    width: 500px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .contact-title h1 {
+    font-size: 28px;
+  }
+
+  .contact-input input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
