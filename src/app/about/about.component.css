@@ -1,34 +1,26 @@
 .about {
   padding: 20px;
-  /* min-width: 1400px; */
 }
 
 .about-title {
-  text-align: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.profile img {
+  height: 70px;
+  margin: 0 5px 40px 5px;
 }
 
 .introduction {
-  /* display: flex;
-  justify-content: center;
-  padding: 20px;
-  align-items: baseline;
-  margin-bottom: 30px; */
   text-align: center;
 }
 
 .description {
   max-width: 1400px;
-}
-
-.profile img {
-  height: 70px;
-  margin-left: 5px;
-  margin-bottom: 40px;
-  /* border-radius: 50%; */
+  margin: 0 auto;
 }
 
 .skills {
@@ -53,7 +45,6 @@
 
 .certificate-container {
   display: flex;
-  width: 100%;
   transition: transform 0.5s ease;
 }
 
@@ -94,15 +85,14 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.skill {
-  /* margin-bottom: 20px; */
+.skills .skill {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   min-width: 1400px;
 }
 
-.skill h3 {
+.skills .skill h3 {
   text-align: center;
 }
 
@@ -112,16 +102,10 @@ button:disabled {
   justify-content: space-around;
 }
 
-.skill img {
-  height: 50px;
-  width: 50px;
-}
-
-.one-skill {
+.skill-part .one-skill {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 8px;
@@ -129,24 +113,32 @@ button:disabled {
   overflow: hidden;
 }
 
+.skill-part .one-skill label {
+  font-size: 18px;
+  display: block;
+}
+
+.skill-part .one-skill img {
+  height: 50px;
+  width: 50px;
+}
+
 .tooltip {
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   position: absolute;
-  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .one-skill:hover .tooltip {
@@ -154,70 +146,93 @@ button:disabled {
   opacity: 1;
 }
 
-.dark-theme {
-  background-color: rgb(10, 10, 10);
-  color: inherit;
+/* Rotation Keyframes */
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.accordion {
-  display: flex;
-  flex-direction: column;
+@keyframes rotateLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
-.accordion-item {
-  background-color: #141414;
-  color: inherit;
-  border: none;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  padding: 20px;
+.rotate-right {
+  animation: rotateRight 10s linear infinite;
 }
 
-.accordion-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.rotate-left {
+  animation: rotateLeft 10s linear infinite;
 }
 
-.accordion-content {
-  display: none;
+.stop {
+  animation: none;
 }
 
-.accordion-content--opened {
-  display: block;
-  transition: display 0.3s ease-in;
-}
+/* Media Queries */
 
-.skill label {
-  font-size: 18px;
-  display: block;
-}
-.skill:nth-child(2) .progress-bar {
-  background-color: #e74c3c;
-}
-
-.skill:nth-child(3) .progress-bar {
-  background-color: #8e44ad;
-}
-
-.skill:nth-child(4) .progress-bar {
-  background-color: #f39c12;
-}
-
+/* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1500px) {
-  /* .about {
-    width: 70%;
-  } */
-
-  .introduction h4{
+  .introduction h4 {
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     font-size: 20px;
   }
 
-  .skill {
+  .skills .skill {
     min-width: 50%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .about-title {
+    flex-direction: column;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .certificate-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .certificate-card {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button.prev,
+  button.next {
+    display: none;
+  }
+
+  .introduction h4 {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .skill-part {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills .skill {
+    min-width: 90%;
+  }
+
+  .profile img {
+    margin: 0 0 20px 0;
   }
 }

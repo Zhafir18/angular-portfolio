@@ -2,11 +2,16 @@
   width: 2000px;
 }
 
+.home {
+  padding: 20px;
+}
+
 .hero-section {
   height: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .hero-word {
@@ -15,15 +20,19 @@
   gap: 20px;
 }
 
+.about-me-section {
+  display: flex;
+  justify-content: center;
+}
+
 .about-me {
-  padding: 10px;
+  padding: 10px 20px;
   background-color: rgb(48, 50, 53);
   border-radius: 999px;
   margin-top: 20px;
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
@@ -33,13 +42,11 @@
 
 .hero-image {
   display: flex;
-  flex-direction: column;
-}
-
-.hero-image {
-  display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .hero-image .angular,
@@ -67,9 +74,7 @@
   margin-right: 150px;
 }
 
-.angular p,
-.java p,
-.dotnet p {
+.hero-image p {
   display: none;
   position: absolute;
   bottom: 0;
@@ -98,18 +103,6 @@
   height: 100%;
   object-fit: contain;
   transition: transform 5s linear;
-}
-
-.rotate-right {
-  transform: rotate(360deg);
-}
-
-.rotate-left {
-  transform: rotate(-360deg);
-}
-
-.stop {
-  transform: rotate(0deg);
 }
 
 .project-section {
@@ -143,7 +136,6 @@
   flex: 0 0 auto;
   width: 300px;
   margin-right: 16px;
-  /* background-color: #fff; */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -163,15 +155,14 @@
 .carousel-card-body button {
   margin-top: 20px;
   border: none;
-  border-radius: 9999px;
+  border-radius: 999px;
   padding: 15px;
-  transition: background-color 0.2s ease-in-out;
   color: white;
   background-color: rgb(48, 50, 53);
+  transition: background-color 0.2s ease-in-out;
 }
 
 .carousel-card-body button:hover {
-  color: white;
   background-color: rgb(130, 130, 156);
 }
 
@@ -214,12 +205,12 @@
   border: none;
   background-color: rgb(48, 50, 53);
   color: white;
-  border-radius: 9999px;
+  border-radius: 999px;
   padding: 20px;
   font-weight: bolder;
   font-size: larger;
   margin-top: 20px;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .getintouch button:hover {
@@ -257,6 +248,8 @@
 .stop {
   animation: none;
 }
+
+/* Media Queries */
 
 /* Untuk tablet */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -302,6 +295,11 @@
   .hero-word {
     gap: 15px;
   }
+
+  .about-me {
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
 }
 
 /* Untuk layar kecil (smartphone) */
@@ -342,7 +340,6 @@
   .carousel-container {
     flex-direction: column;
     gap: 20px;
-    /* width: 50%; */
     align-items: center;
   }
 
