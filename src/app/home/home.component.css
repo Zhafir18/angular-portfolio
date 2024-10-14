@@ -1,11 +1,9 @@
 :host {
   width: 2000px;
 }
-
 .home {
   padding: 20px;
 }
-
 .hero-section {
   height: 500px;
   display: flex;
@@ -13,18 +11,15 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
 .hero-word {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .about-me-section {
   display: flex;
   justify-content: center;
 }
-
 .about-me {
   padding: 10px 20px;
   background-color: rgb(48, 50, 53);
@@ -35,11 +30,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .about-me:hover {
   background-color: rgb(130, 130, 156);
 }
-
 .hero-image {
   display: flex;
   justify-content: space-around;
@@ -48,7 +41,6 @@
   gap: 20px;
   margin-top: 20px;
 }
-
 .hero-image .angular,
 .hero-image .java,
 .hero-image .dotnet {
@@ -61,19 +53,15 @@
   overflow: hidden;
   margin-top: 20px;
 }
-
 .hero-image .angular {
   margin-right: 150px;
 }
-
 .hero-image .java {
   margin-left: 150px;
 }
-
 .hero-image .dotnet {
   margin-right: 150px;
 }
-
 .hero-image p {
   display: none;
   position: absolute;
@@ -87,31 +75,26 @@
   line-height: 75px;
   font-weight: bolder;
 }
-
 .hero-image .angular:hover p,
 .hero-image .java:hover p,
 .hero-image .dotnet:hover p {
   display: block;
 }
-
 #dotnet-image {
   border-radius: 8px;
 }
-
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: transform 5s linear;
 }
-
 .project-section {
   height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .projects-carousel {
   position: relative;
   display: flex;
@@ -119,7 +102,6 @@
   width: 1300px;
   overflow: hidden;
 }
-
 .carousel-container {
   display: flex;
   width: 1300px;
@@ -130,7 +112,6 @@
   scroll-snap-type: x mandatory;
   padding: 20px;
 }
-
 .carousel-card {
   scroll-snap-align: start;
   flex: 0 0 auto;
@@ -217,7 +198,6 @@
   background-color: rgb(130, 130, 156);
 }
 
-/* Rotation Keyframes */
 @keyframes rotateRight {
   from {
     transform: rotate(0deg);
@@ -235,8 +215,6 @@
     transform: rotate(-360deg);
   }
 }
-
-/* Rotation Classes */
 .rotate-right {
   animation: rotateRight 10s linear infinite;
 }
@@ -249,9 +227,6 @@
   animation: none;
 }
 
-/* Media Queries */
-
-/* Untuk tablet */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   :host {
     width: 100%;
@@ -289,7 +264,7 @@
   }
 
   .carousel-button {
-    display: none; /* Sembunyikan tombol navigasi di mode kolom */
+    display: none;
   }
 
   .hero-word {
@@ -350,7 +325,7 @@
   }
 
   .carousel-button {
-    display: none; /* Sembunyikan tombol navigasi di mode kolom */
+    display: none;
   }
 
   .about-me {
