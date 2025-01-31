@@ -40,6 +40,11 @@ nav {
 
 .nav-theme {
   font-size: larger;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.nav-theme a{
+  cursor: pointer;
 }
 
 .nav-dark {

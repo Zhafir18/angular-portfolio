@@ -1,9 +1,26 @@
-.project {
+.project-title {
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.project-title img {
+  height: 70px;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
+
+.project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
   justify-content: center;
   padding: 20px;
+}
+
+a {
+  cursor: pointer;
 }
 
 .card {
@@ -33,11 +50,6 @@
   font-size: 1.25em;
   font-weight: bold;
   padding: 15px;
-}
-
-.card-title a {
-  text-decoration: none;
-  color: #333;
 }
 
 .card-description {

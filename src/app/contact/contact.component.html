@@ -1,22 +1,39 @@
 <div class="contact">
   <div class="contact-title">
     <h1>Contact Me</h1>
-    <span><img src="/assets/contact-icon.png" alt="" /></span>
+    <span><img src="/assets/contact-icon.png" alt="Contact Icon" /></span>
   </div>
   <div class="contact-me">
     <div class="contact-card">
-      <form (ngSubmit)="sendEmail()">
+      <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
         <div class="contact-input">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" required />
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            required
+            placeholder="Enter your name"
+          />
         </div>
         <div class="contact-input">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            required
+            placeholder="Enter your email"
+          />
         </div>
         <div class="contact-input">
           <label for="message">Message</label>
-          <textarea name="message" id="message" required></textarea>
+          <textarea
+            id="message"
+            formControlName="message"
+            required
+            placeholder="Enter your message"
+          ></textarea>
         </div>
         <button type="submit">Send</button>
       </form>

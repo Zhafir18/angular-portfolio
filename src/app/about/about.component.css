@@ -139,6 +139,7 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 7px;
 }
 
 .one-skill:hover .tooltip {
